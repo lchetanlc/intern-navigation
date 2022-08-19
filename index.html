@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:500');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+         html {
+	 font-size: 62.5%;
+}
+ body {
+	 box-sizing: border-box;
+	 font-size: 1.7rem;
+	 letter-spacing: 0.05rem;
+	 line-height: 1.3;
+}
+
+ .header {
+
+	 height: 95vh;
+	 position: relative;
+}
+ .header .container {
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 position: fixed;
+	 padding: 1em 0;
+	
+	 z-index: 1000;
+}
+ .header .container::after {
+	 
+	 display: table;
+	 clear: both;
+}
+ .header .container.navbar-visiable {
+	 background: #ffce54;
+	 background: linear-gradient(100deg, #24a4ea, #379deb 25%, #b76bf0);
+}
+ .header .container .nav-wrapper {
+	 width: 95%;
+	 max-width: 1000px;
+	 margin: 0 auto;
+	 position: relative;
+}
+ .header .container .nav-wrapper .menu-toggle {
+	 display: none;
+}
+ .header .container .nav-wrapper .logo {
+	 float: left;
+	 color: white;
+	 font-size: 3.4rem;
+	 line-height: 5.2rem;
+	 font-weight: bold;
+	 -webkit-font-smoothing: antialiased;
+	 font-smoothing: antialiased;
+    font-family: sans-serif;
+}
+ .header .container .nav-wrapper .logo span {
+	 font-weight: 400;
+}
+ header 
+ .container nav ul li {
+	 display: flex;
+	 list-style-type: none;
+	 float: right;
+     justify-content:space-between;
+}
+ header 
+ .container nav ul li a {
+	 color: white;
+	 line-height: 3.2rem;
+	 text-decoration: none;
+	 -webkit-font-smoothing: antialiased;
+	
+	 margin: 0 1px;
+	 padding: -2.8rem 3rem;
+}
+ header
+ .container nav ul li a:hover {
+	 border-radius: 25px;
+	 background: rgba(0, 0, 0, 0.2);
+}
+
+ .hero {
+	 overflow: hidden;
+	 position: relative;
+	 height: calc(95vh);
+	 min-height: 200px;
+	 background: #ffce54;
+	 background: linear-gradient(100deg, #24a4ea, #379deb 25%, #b76bf0);
+}
+ .hero .w {
+	 position: absolute;
+	 top: 100%;
+	 left: -25vw;
+	 right: 0px;
+	 background: url(https://i.koya.io/whitewave2.svg);
+	 background-position: center;
+}
+ .hero .wave {
+	 height: 200px;
+	 transform: translateY(-40px);
+}
+ .hero .wave2 {
+	 height: 240px;
+	 transform: translateY(-80px);
+	 background-size: 960px 240px;
+	 opacity: 0.5;
+	 left: -80vw;
+	 right: -5vw;
+}
+ .hero .wave3 {
+	 height: 220px;
+	 transform: translateY(-120px);
+	 background-size: 880px 220px;
+	 opacity: 0.33;
+	 left: 0vw;
+	 right: -20vw;
+}
+ .hero .wave4 {
+	 height: 280px;
+	 transform: translateY(-160px);
+	 background-size: 1120px 280px;
+	 opacity: 0.1;
+	 left: 0vw;
+	 right: -40vw;
+}
+main
+ .section1 {
+	 height: 1000px;
+}
+
+ .mobile-nav-container {
+	 display: none;
+	 background-color: red;
+	 float: right;
+	 width: 260px;
+	 text-align: center;
+}
+ .mobile-nav-container-active {
+	 position: absolute;
+	 display: inline-block;
+	 background-color: red;
+	 float: right;
+	 width: 260px;
+	 text-align: center;
+	 z-index: 1000;
+}
+ @media (min-width: 520px) and (max-width: 620px) {
+	 .header 
+	 .container 
+	 .nav-wrapper 
+	 nav {
+		 display: none;
+	}
+	 .header 
+	 .container 
+	 .nav-wrapper 
+	 .menu-toggle {
+		 display: inline-block;
+		 cursor: pointer;
+		 float: right;
+		 position: fixed;
+		 top: 1em;
+		 right: 0;
+		 z-index: 100;
+		 margin-right: 5px;
+	}
+	 .header 
+	 .container 
+	 .nav-wrapper 
+	 .menu-toggle .menu-toggle-label {
+		 color: white;
+		 font-smoothing: antialiased;
+		 -webkit-font-smoothing: antialiased;
+		 line-height: 3.2rem;
+		 margin: 0 1px;
+		 padding: 1.2rem 2rem;
+	}
+	 .header 
+	 .container 
+	 .nav-wrapper 
+	 .menu-toggle .menu-toggle-label:hover {
+		 border-radius: 25px;
+		 background: rgba(0, 0, 0, 0.2);
+	}
+}
+nav ul li{
+    margin-left:30px;
+    padding:10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+           L<span> Chetan</span>
+          </div>
+          <nav>
+            <ul>
+              <li><a style="padding-left:13px;padding-right:13px" href="#">About</a></li>
+              <li><a style="padding-left:13px;padding-right:13px" href="#">Portfolio</a></li>
+              <li><a style="padding-left:13px;padding-right:13px" href="#">Blog</a></li>
+              <li><a style="padding-left:13px;padding-right:13px" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wave-wrapper">
+        <div class="hero" id="particles-js">
+         <div class="w wave"></div>
+         <div class="w wave2"></div>
+         <div class="w wave3"></div>
+         <div class="w wave4"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section1">
+        
+      </section>
+    </main>
+  </body>
+  
+</html>
